@@ -1,0 +1,14 @@
+Package: ZYXUnaivelasso
+Title: naive LASSO solution
+Version: 1.0
+Authors@R: 
+    person(given = "Zhuoyan",
+           family = "Xu",
+           role = c("aut", "cre"),
+           email = "zxu444t@wisc.com")
+Description: This is a naive lasso solution with fixed lambda, used default Nelder-Mead
+             method in optim function to find solution.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
