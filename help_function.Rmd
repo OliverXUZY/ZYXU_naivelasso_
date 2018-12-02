@@ -1,0 +1,64 @@
+---
+title: "help_with_ZYXU_package"
+author: "ZY_XU"
+date: "11/27/2018"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+#   How to play with "ZYXUnaivelasso" ?
+#####   This is a package that calculate the lasso problem(very, very, very naive),
+##### since I set the lambda to a fixed value 2, the result in example is not
+##### different with normal linear regression(kind of embarrassing), but I still
+##### want to write it out, just for fun!
+
+##### Hope you guys have fun here ! :)
+
+## How to library it?
+ ** First, you need to download the .tar file named "ZYXUnaivelasso_1.0.tar", then run 
+the code below:**
+
+
+```{r}
+rm(list=ls())
+if (!require("ZYXUnaivelasso")) {
+  install.packages("ZYXUnaivelasso_1.0.tar.gz", 
+                 repos = NULL, 
+                 type = "source") # do this once per lifetime
+  stopifnot(require("ZYXUnaivelasso")) # do this once per session
+}
+
+
+
+
+```
+
+**You can Shutdown R studio and open "help.R" **
+```{r}
+require("ZYXUnaivelasso")
+
+```
+
+## How to use it?
+ ** you can use lasso function to calculate the problem with your own data, 
+same as the lm() function in simple linear regression with only two parameter
+beta0 and beta1.**
+
+#### There are four function,
+#### 1:the "lasso" you use to fit model. 2: The "print" you use to print coefficients
+#### 3:The "coef" you use to extract coefficients
+#### 4:The predict you use to predict new values
+
+
+```{r }
+example(lasso)
+?lasso
+?coef.las
+?predict.las
+?print.las
+?area
+```
+
+**I wirte all the help web by myself, whether there is link you can click into it to see the description I wrote about my package~~**
